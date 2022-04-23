@@ -15,7 +15,7 @@ spec:
       #imagePullSecrets:
       # - name: dockerreposecret
       containers:
-      - image: dockerhandson/spring-boot-mongo
+      - image: mnforba/spring-boot-mongo
         name: springboot
         ports:
         - name: springboot
