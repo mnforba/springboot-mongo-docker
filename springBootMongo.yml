@@ -60,7 +60,7 @@ spec:
       volumes:
       - name: mongo-persistent-storage
         hostPath:
-         path: /tmp/dbbackup
+         path: /tmp/backup
 ---
 # Mongo Node Port RC
 apiVersion: v1
