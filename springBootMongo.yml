@@ -2,18 +2,18 @@ apiVersion: v1
 kind: ReplicationController
 metadata:
   labels:
-    name: springboot
+    name: demoweb
   name: spring-controller
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        name: springboot
+        name: demoweb
     spec:
       containers:
       - image: mnforba/demo-web
-        name: springboot
+        name: demoweb
         ports:
         - name: springboot
           containerPort: 8080      
@@ -23,15 +23,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    name: springboot
-  name: springboot
+    name: demoweb
+  name: demoweb
 spec:
   type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    name: springboot
+    name: demoweb
 ---
 # Mongo host path rc
 apiVersion: v1
